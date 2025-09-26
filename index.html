@@ -286,6 +286,135 @@
         </g>
       </svg>
     </figure>
+    <figure id="scene-adjusted-figure">
+      <figcaption>Adjusted scene (Step 3)</figcaption>
+      <svg
+        viewBox="0 0 800 500"
+        width="800"
+        height="500"
+        aria-labelledby="svgTitle svgDesc"
+        role="img"
+        id="scene-adjusted"
+      >
+        <title id="svgTitle">House and Garden Scene</title>
+        <desc id="svgDesc">
+          An SVG illustration showing a house with a roof, chimney, door, windows, a tree, sun, cloud, grass, fence, curved path, and a caption.
+        </desc>
+        <style>
+          /* Scoped styles for adjusted scene only */
+          #scene-adjusted .fence-post { stroke: #fff; stroke-width: 10; stroke-dasharray: 12 8; }
+          #scene-adjusted .fence-triangle { stroke: #fff; stroke-width: 6; stroke-dasharray: 8 4; }
+          #scene-adjusted .house-body { fill: #ffe5b4; stroke: #b97a56; stroke-width: 4; }
+          #scene-adjusted .roof { fill: #b22234; stroke: #8b1a1a; stroke-width: 5; }
+          #scene-adjusted .window { fill: #b3e0ff; stroke: #4a90e2; stroke-width: 3; }
+          #scene-adjusted .door { fill: #deb887; stroke: #8b5c2a; stroke-width: 3; }
+          #scene-adjusted .tree-trunk { fill: #8d5524; }
+          #scene-adjusted .tree-foliage { fill: #3cb371; stroke: #228b22; stroke-width: 3; }
+          #scene-adjusted .mailbox-post { fill: #8d5524; }
+          #scene-adjusted .mailbox-box { fill: #b3e0ff; stroke: #4a90e2; stroke-width: 2; }
+          #scene-adjusted .mailbox-flag { fill: #4a90e2; }
+          #scene-adjusted .mailbox-text { fill: #333; font-size: 13px; font-family: Arial; }
+          #scene-adjusted .smoke { fill: #e0e0e0; opacity: 0.5; }
+          #scene-adjusted .footpath { stroke: #b2a17a; stroke-width: 16; fill: none; opacity: 0.7; }
+          #scene-adjusted .stone { fill: #e0e0e0; opacity: 0.7; }
+        </style>
+        <!-- Sky (top half) -->
+        <rect x="0" y="0" width="800" height="250" fill="#aee7ff" />
+        <!-- Grass (bottom half) -->
+        <rect x="0" y="250" width="800" height="250" fill="#6dcf4b" />
+
+        <!-- Sun (circle) -->
+        <circle cx="90" cy="90" r="50" fill="#ffe066" stroke="#ffd700" stroke-width="5" />
+
+        <!-- Cloud (ellipse + circles) -->
+        <ellipse cx="220" cy="90" rx="40" ry="25" fill="#fff" opacity="0.9" />
+        <circle cx="200" cy="90" r="20" fill="#fff" opacity="0.9" />
+        <circle cx="240" cy="90" r="18" fill="#fff" opacity="0.9" />
+
+        <!-- Tree trunk (rect) - repositioned slightly left -->
+        <g transform="translate(-30,0)">
+          <rect x="650" y="270" width="24" height="70" class="tree-trunk" />
+          <!-- Tree foliage (ellipse) -->
+          <ellipse cx="662" cy="250" rx="45" ry="35" class="tree-foliage" />
+        </g>
+
+        <!-- House group - repositioned slightly right -->
+        <g transform="translate(20,0)">
+          <!-- House body (rect) -->
+          <rect x="320" y="220" width="180" height="120" class="house-body" />
+          <!-- Roof (polygon) -->
+          <polygon points="310,220 410,140 510,220" class="roof" />
+          <!-- Chimney (rect) -->
+          <rect x="460" y="155" width="22" height="45" fill="#a0522d" stroke="#8b4513" stroke-width="3" />
+          <!-- Door (rect) -->
+          <rect x="390" y="270" width="40" height="70" class="door" />
+          <!-- Door knob (circle) -->
+          <circle cx="425" cy="305" r="5" fill="#8b5c2a" />
+          <!-- Left window (rect) -->
+          <rect x="340" y="240" width="35" height="35" class="window" />
+          <!-- Right window (rect) -->
+          <rect x="445" y="240" width="35" height="35" class="window" />
+          <!-- Window panes (lines) -->
+          <line x1="357.5" y1="240" x2="357.5" y2="275" stroke="#4a90e2" stroke-width="2" />
+          <line x1="340" y1="257.5" x2="375" y2="257.5" stroke="#4a90e2" stroke-width="2" />
+          <line x1="462.5" y1="240" x2="462.5" y2="275" stroke="#4a90e2" stroke-width="2" />
+          <line x1="445" y1="257.5" x2="480" y2="257.5" stroke="#4a90e2" stroke-width="2" />
+          <!-- Chimney smoke (subtle puff, ellipses) -->
+          <ellipse cx="470" cy="155" rx="10" ry="6" class="smoke" />
+          <ellipse cx="475" cy="145" rx="8" ry="5" class="smoke" />
+          <ellipse cx="480" cy="135" rx="6" ry="4" class="smoke" />
+        </g>
+
+        <!-- Fence (short vertical straight posts, dashed) -->
+        <line x1="250" y1="370" x2="250" y2="340" class="fence-post" />
+        <line x1="280" y1="370" x2="280" y2="340" class="fence-post" />
+        <line x1="310" y1="370" x2="310" y2="340" class="fence-post" />
+        <line x1="340" y1="370" x2="340" y2="340" class="fence-post" />
+        <line x1="370" y1="370" x2="370" y2="340" class="fence-post" />
+        <line x1="400" y1="370" x2="400" y2="340" class="fence-post" />
+        <line x1="430" y1="370" x2="430" y2="340" class="fence-post" />
+        <line x1="460" y1="370" x2="460" y2="340" class="fence-post" />
+        <line x1="490" y1="370" x2="490" y2="340" class="fence-post" />
+        <line x1="520" y1="370" x2="520" y2="340" class="fence-post" />
+
+        <!-- Fence triangles (no bottom line, between posts, dashed) -->
+        <polyline points="250,340 265,325 280,340" fill="none" class="fence-triangle" />
+        <polyline points="280,340 295,325 310,340" fill="none" class="fence-triangle" />
+        <polyline points="310,340 325,325 340,340" fill="none" class="fence-triangle" />
+        <polyline points="340,340 355,325 370,340" fill="none" class="fence-triangle" />
+        <polyline points="370,340 385,325 400,340" fill="none" class="fence-triangle" />
+        <polyline points="400,340 415,325 430,340" fill="none" class="fence-triangle" />
+        <polyline points="430,340 445,325 460,340" fill="none" class="fence-triangle" />
+        <polyline points="460,340 475,325 490,340" fill="none" class="fence-triangle" />
+        <polyline points="490,340 505,325 520,340" fill="none" class="fence-triangle" />
+
+        <!-- Curved stone footpath to door -->
+        <path
+          d="M410,410 Q420,460 390,490"
+          class="footpath"
+        />
+        <!-- Stones on footpath -->
+        <circle cx="410" cy="420" r="11" class="stone"/>
+        <circle cx="415" cy="440" r="10" class="stone"/>
+        <circle cx="405" cy="460" r="9" class="stone"/>
+        <circle cx="395" cy="480" r="8" class="stone"/>
+
+        <!-- Small mailbox near path -->
+        <!-- Post -->
+        <rect x="385" y="445" width="7" height="30" class="mailbox-post"/>
+        <!-- Box -->
+        <rect x="375" y="430" width="25" height="15" rx="5" class="mailbox-box"/>
+        <!-- Flag -->
+        <polygon points="398,435 405,438 398,441" class="mailbox-flag"/>
+        <!-- "H" text -->
+        <text x="387" y="440" class="mailbox-text">H</text>
+
+        <!-- Caption (text) -->
+        <text x="400" y="490" text-anchor="middle" font-size="28" fill="#333" font-family="Arial, sans-serif">
+          Welcome to the House & Garden
+        </text>
+      </svg>
+    </figure>
   </div>
 </body>
 </html>
